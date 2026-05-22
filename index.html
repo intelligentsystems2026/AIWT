@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AAWT 2026 | Agentic AI Workflows and Technologies</title>
+  <meta name="description" content="International Workshop on Agentic AI Workflows and Technologies (AAWT 2026). Call for papers, topics, dates, venue, committee, and submission details." />
+
+  <style>
+    :root {
+      --ink: #16211f;
+      --muted: #5d6f6a;
+      --green: #0f7b63;
+      --green-dark: #075244;
+      --green-soft: #eaf7f3;
+      --sand: #fbf7ef;
+      --sand-2: #f4eadc;
+      --white: #ffffff;
+      --line: #dfe9e5;
+      --shadow: 0 16px 38px rgba(22, 33, 31, 0.09);
+      --radius: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--sand);
+      color: var(--ink);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1160px, 92%);
+      margin: 0 auto;
+    }
+
+    .page-frame {
+      width: min(1280px, 96%);
+      margin: 22px auto;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      color: var(--green-dark);
+      letter-spacing: 0.2px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid var(--green);
+      display: grid;
+      place-items: center;
+      color: var(--green-dark);
+      font-weight: 900;
+      font-size: 0.9rem;
+      background: var(--green-soft);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      color: var(--ink);
+      font-size: 0.93rem;
+      font-weight: 700;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .nav-links a:hover {
+      color: var(--green);
+    }
+
+    .hero {
+      padding: 84px 0 58px;
+      background:
+        linear-gradient(90deg, rgba(15, 123, 99, 0.07) 1px, transparent 1px),
+        linear-gradient(rgba(15, 123, 99, 0.07) 1px, transparent 1px),
+        var(--white);
+      background-size: 36px 36px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-layout {
+      max-width: 940px;
+    }
+
+    .label {
+      display: inline-block;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--sand);
+      color: var(--green-dark);
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 800;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      color: var(--green-dark);
+      font-size: clamp(2.6rem, 6vw, 5.6rem);
+      line-height: 0.98;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+      max-width: 900px;
+    }
+
+    h2 {
+      color: var(--green-dark);
+      font-size: clamp(1.9rem, 3.2vw, 3.1rem);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      color: var(--green-dark);
+      font-size: 1.32rem;
+      margin-bottom: 10px;
+    }
+
+    .lead {
+      color: var(--ink);
+      font-size: 1.14rem;
+      max-width: 860px;
+      margin-bottom: 16px;
+    }
+
+    .hero-note {
+      border-left: 5px solid var(--green);
+      padding: 18px 22px;
+      background: var(--sand);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin-top: 28px;
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 22px;
+      border-radius: 10px;
+      background: var(--green);
+      color: var(--white);
+      border: 2px solid var(--green);
+      font-weight: 800;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      background: var(--green-dark);
+      border-color: var(--green-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: var(--white);
+      color: var(--green-dark);
+      border-color: var(--line);
+    }
+
+    .btn-outline:hover {
+      background: var(--green-soft);
+      color: var(--green-dark);
+      border-color: var(--green);
+    }
+
+    .side-card {
+      background: var(--sand);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px;
+      font-family: Arial, Helvetica, sans-serif;
+      box-shadow: var(--shadow);
+    }
+
+    .side-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .facts {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .facts li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .facts li:last-child {
+      border-bottom: 0;
+    }
+
+    .facts span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 3px;
+    }
+
+    section {
+      background: var(--white);
+      padding: 68px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head {
+      max-width: 840px;
+      margin-bottom: 30px;
+    }
+
+    .section-head p {
+      color: var(--ink);
+      font-size: 1.05rem;
+    }
+
+    .two-column {
+      columns: 2;
+      column-gap: 42px;
+      color: var(--ink);
+      font-size: 1.02rem;
+    }
+
+    .two-column p {
+      break-inside: avoid;
+      margin-bottom: 16px;
+    }
+
+    .topic-table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--line);
+      background: var(--white);
+      box-shadow: var(--shadow);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topic-table td {
+      width: 50%;
+      padding: 15px 18px;
+      border-bottom: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      color: var(--ink);
+      font-weight: 650;
+      vertical-align: top;
+    }
+
+    .topic-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .topic-table td:last-child {
+      border-right: 0;
+    }
+
+    .dates-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .date-item {
+      padding: 24px;
+      border-right: 1px solid var(--line);
+      background: var(--sand);
+    }
+
+    .date-item:last-child {
+      border-right: 0;
+    }
+
+    .date-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .date-item strong {
+      color: var(--green-dark);
+      font-size: 1.1rem;
+    }
+
+    .venue-committee-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 28px;
+    }
+
+    .plain-card {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 28px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .plain-card p {
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .committee-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 14px;
+    }
+
+    .role-box {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px;
+      background: var(--sand);
+    }
+
+    .person {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--line);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .person:last-child {
+      border-bottom: 0;
+    }
+
+    .person strong {
+      display: block;
+      color: var(--green-dark);
+    }
+
+    .person span {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .pc-placeholder {
+      margin-top: 18px;
+      padding: 18px;
+      border: 1px dashed var(--green);
+      border-radius: var(--radius);
+      color: var(--green-dark);
+      font-weight: 800;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .submit-section {
+      padding: 56px 0 72px;
+    }
+
+    .submit-box {
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 32px;
+      background: var(--sand);
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .submit-box p {
+      color: var(--ink);
+      max-width: 760px;
+    }
+
+    footer {
+      background: var(--white);
+      color: var(--muted);
+      text-align: center;
+      padding: 28px 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.94rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero-layout,
+      .venue-committee-grid,
+      .committee-row {
+        grid-template-columns: 1fr;
+      }
+
+      .dates-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .date-item:nth-child(2) {
+        border-right: 0;
+      }
+
+      .date-item:nth-child(1),
+      .date-item:nth-child(2) {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .two-column {
+        columns: 1;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .page-frame {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 18px 0;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 12px 18px;
+      }
+
+      .hero {
+        padding: 56px 0 44px;
+      }
+
+      .dates-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .date-item,
+      .date-item:nth-child(2) {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .date-item:last-child {
+        border-bottom: 0;
+      }
+
+      .topic-table td {
+        display: block;
+        width: 100%;
+        border-right: 0;
+      }
+
+      .submit-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-frame">
+    <header>
+      <div class="container nav">
+        <a href="#top" class="brand" aria-label="AAWT Workshop home">
+          <span class="brand-mark">AW</span>
+          <span>AAWT 2026</span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#cfp">Call</a>
+          <a href="#topics">Topics</a>
+          <a href="#dates">Dates</a>
+          <a href="#committee">Committee</a>
+          <a href="#venue">Venue</a>
+          <a href="#submit">Submit</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-layout">
+          <div>
+            <span class="label">Co-located with NGEN-AI 2026</span>
+            <h1>International Workshop on Agentic AI Workflows and Technologies</h1>
+            <p class="lead">
+              AAWT 2026 focuses on the design, engineering, evaluation, and deployment of agentic AI workflows and technologies, including autonomous and semi-autonomous AI agents, multi-agent collaboration, tool-using AI systems, orchestration frameworks, and workflow automation.
+            </p>
+            <p class="lead">
+              The workshop is organized with the 2026 International Conference on Next Generation AI Systems (NGEN-AI 2026), taking place on 1–4 September 2026 at the University of Trento, Italy, and online over Zoom.
+            </p>
+            <div class="actions">
+              <a class="btn" href="#submit">Submit Paper</a>
+              <a class="btn btn-outline" href="#cfp">Read Call for Papers</a>
+            </div>
+            <div class="hero-note">
+              Accepted papers will be published in the NGEN-AI 2026 main conference proceedings in Springer CCIS series, indexed in leading databases including SCOPUS, Norwegian Register for Scientific Journals and Series, DBLP, EI Compendex, INSPEC, SCImago, zbMATH, and the Japanese Science and Technology Agency (JST).
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cfp">
+        <div class="container">
+          <div class="section-head">
+            <span class="label">Call for Papers</span>
+            <h2>Advancing agentic AI workflows from concepts to dependable systems</h2>
+            <p>
+              AAWT 2026 invites original submissions on the methods, architectures, platforms, tools, and practices needed to build and evaluate agentic AI workflows and technologies. The workshop welcomes research and practice on systems where AI agents plan, reason, call tools, coordinate tasks, interact with humans, access external services, and execute complex workflows across software, data, business, scientific, and industrial environments.
+            </p>
+          </div>
+
+          <div class="two-column">
+            <p>
+              Agentic AI is rapidly changing the way digital work is organized and automated. New AI agents can support information seeking, software development, decision support, data analysis, customer service, operations, research, and many other tasks. However, building agentic systems that are reliable, transparent, secure, controllable, and useful in real settings remains a major challenge.
+            </p>
+            <p>
+              AAWT focuses on the full lifecycle of agentic workflows, from design and modelling to orchestration, monitoring, evaluation, deployment, governance, and maintenance. The workshop is interested in both single-agent and multi-agent systems, human-in-the-loop workflows, agent communication protocols, tool integration, memory and context management, workflow verification, and operational risks.
+            </p>
+            <p>
+              The workshop welcomes full research papers, short papers, position papers, experience reports, industrial case studies, tool demonstrations, benchmark papers, datasets, and papers describing lessons learned from real-world agentic AI deployments.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="committee">
+        <div class="container">
+          <div class="section-head">
+            <span class="label">Organizing Committee</span>
+            <h2>Workshop leadership</h2>
+            <p>Replace the names and affiliations below with the confirmed AAWT committee members.</p>
+          </div>
+
+          <div class="committee-row">
+            <div class="role-box">
+              <h3>General Chairs</h3>
+              <div class="person">
+                <strong>General Chair 1</strong>
+                <span>Affiliation, Country</span>
+              </div>
+              <div class="person">
+                <strong>General Chair 2</strong>
+                <span>Affiliation, Country</span>
+              </div>
+            </div>
+            <div class="role-box">
+              <h3>TPC Chairs</h3>
+              <div class="person">
+                <strong>TPC Chair 1</strong>
+                <span>Affiliation, Country</span>
+              </div>
+              <div class="person">
+                <strong>TPC Chair 2</strong>
+                <span>Affiliation, Country</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-placeholder">Program Committee members will be announced soon.</div>
+        </div>
+      </section>
+
+      <section id="topics">
+        <div class="container">
+          <div class="section-head">
+            <span class="label">Topics of Interest</span>
+            <h2>Relevant topics include, but are not limited to</h2>
+          </div>
+
+          <table class="topic-table">
+            <tr>
+              <td>Architectures and design patterns for agentic AI systems</td>
+              <td>Agentic workflow modelling, orchestration, and execution</td>
+            </tr>
+            <tr>
+              <td>Single-agent and multi-agent systems</td>
+              <td>Tool-using AI systems and integration with external services</td>
+            </tr>
+            <tr>
+              <td>Planning, reasoning, memory, and context management for agents</td>
+              <td>Human-in-the-loop and human-on-the-loop agentic workflows</td>
+            </tr>
+            <tr>
+              <td>Agent communication, coordination, negotiation, and collaboration</td>
+              <td>Evaluation, benchmarking, and testing of agentic AI workflows</td>
+            </tr>
+            <tr>
+              <td>Reliability, robustness, monitoring, and observability of AI agents</td>
+              <td>Security, privacy, safety, and misuse prevention in agentic AI systems</td>
+            </tr>
+            <tr>
+              <td>Governance, accountability, explainability, and auditability of agentic workflows</td>
+              <td>LLMOps, AgentOps, DevOps, and lifecycle management for agentic systems</td>
+            </tr>
+            <tr>
+              <td>Agentic AI for software engineering, data analysis, operations, and business processes</td>
+              <td>Industrial case studies and real-world deployment lessons</td>
+            </tr>
+            <tr>
+              <td>Datasets, benchmarks, tools, platforms, and reproducibility for agentic AI</td>
+              <td>Ethical, organizational, and societal implications of agentic automation</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <section id="dates">
+        <div class="container">
+          <div class="section-head">
+            <span class="label">Important Dates</span>
+            <h2>Key deadlines</h2>
+            <p>The workshop follows the NGEN-AI 2026 schedule.</p>
+          </div>
+
+          <div class="dates-grid">
+            <div class="date-item">
+              <span>Paper Submission</span>
+              <strong>August 1st, 2026</strong>
+            </div>
+            <div class="date-item">
+              <span>Author Notification</span>
+              <strong>August 12th, 2026</strong>
+            </div>
+            <div class="date-item">
+              <span>Camera-Ready Due</span>
+              <strong>August 20th, 2026</strong>
+            </div>
+            <div class="date-item">
+              <span>Conference & Workshop</span>
+              <strong>1–4 September 2026</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="venue">
+        <div class="container">
+          <div class="section-head">
+            <span class="label">Venue</span>
+            <h2>University of Trento, Italy</h2>
+            <p>
+              AAWT 2026 will be held with NGEN-AI 2026 at the Department of Information Engineering and Computer Science, University of Trento, in Trento, Italy.
+            </p>
+          </div>
+
+          <div class="venue-committee-grid">
+            <div class="plain-card">
+              <h3>Location</h3>
+              <p><strong>Host institution:</strong> University of Trento</p>
+              <p><strong>Department:</strong> Information Engineering and Computer Science</p>
+              <p><strong>Venue:</strong> Polo Ferrari - Povo 1</p>
+              <p><strong>City:</strong> Trento, Italy</p>
+            </div>
+
+            <div class="plain-card">
+              <h3>Format</h3>
+              <p>
+                NGEN-AI 2026 is planned as an in-person event in Trento, with online participation over Zoom.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="submit" class="submit-section">
+        <div class="container">
+          <div class="submit-box">
+            <div>
+              <span class="label">Submission</span>
+              <h2>Submit to AAWT</h2>
+              <p>
+                Authors are invited to submit original and unpublished work through the NGEN-AI 2026 submission system. Please update the button link if AAWT receives a dedicated submission track or workshop link.
+              </p>
+            </div>
+            <a class="btn" href="https://easychair.org/" target="_blank" rel="noopener noreferrer">Submit Paper</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        © 2026 International Workshop on Agentic AI Workflows and Technologies (AAWT 2026). Organized with NGEN-AI 2026.
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
