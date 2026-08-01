@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AAWT 2026 | Agentic AI Workflows and Technologies</title>
-  <meta name="description" content="International Workshop on Agentic AI Workflows and Technologies (AAWT 2026). Call for papers, topics, dates, venue, committee, and submission details." />
+  <meta name="description" content="International Workshop on Agentic AI Workflows and Technologies (AAWT 2026). Call for papers, topics, dates, venue, committee, and submission details.">
 
   <style>
     :root {
@@ -344,6 +344,128 @@
       font-size: 1.1rem;
     }
 
+    .deadline-panel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin: 28px 0;
+      padding: 24px 26px;
+      border: 1px solid var(--green);
+      border-radius: 22px;
+      background: var(--green-soft);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .deadline-panel strong {
+      display: block;
+      color: var(--green-dark);
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+
+    .deadline-panel p {
+      color: var(--ink);
+    }
+
+    .instruction-grid,
+    .policy-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .instruction-card,
+    .policy-card {
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 24px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .instruction-card ul,
+    .policy-card ul,
+    .package-box ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    .instruction-card li,
+    .policy-card li,
+    .package-box li {
+      margin-bottom: 7px;
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
+    }
+
+    .required-text {
+      margin-top: 12px;
+      padding: 14px 16px;
+      border-left: 4px solid var(--green);
+      border-radius: 0 12px 12px 0;
+      background: var(--sand);
+      color: var(--green-dark);
+      font-style: italic;
+    }
+
+    .spacing-top {
+      margin-top: 12px;
+    }
+
+    .package-box {
+      margin-top: 20px;
+      padding: 26px;
+      border: 1px solid var(--green);
+      border-radius: 22px;
+      background: var(--sand);
+    }
+
+    .package-box .actions {
+      margin-top: 20px;
+    }
+
+    .registration-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 24px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .registration-table th,
+    .registration-table td {
+      padding: 15px 18px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+    }
+
+    .registration-table th {
+      background: var(--green-dark);
+      color: var(--white);
+    }
+
+    .registration-table tr:nth-child(even) td {
+      background: var(--sand);
+    }
+
+    .registration-table th:last-child,
+    .registration-table td:last-child {
+      border-right: 0;
+    }
+
+    .registration-note {
+      margin: 20px 0 28px;
+      padding: 18px 20px;
+      border-radius: 16px;
+      background: var(--green-soft);
+      color: var(--ink);
+    }
+
     .venue-committee-grid {
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
@@ -441,8 +563,14 @@
     @media (max-width: 980px) {
       .hero-layout,
       .venue-committee-grid,
-      .committee-row {
+      .committee-row,
+      .instruction-grid,
+      .policy-grid {
         grid-template-columns: 1fr;
+      }
+
+      .full-width {
+        grid-column: auto;
       }
 
       .dates-grid {
@@ -509,6 +637,20 @@
         flex-direction: column;
         align-items: flex-start;
       }
+
+      .deadline-panel {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .registration-table {
+        font-size: 0.88rem;
+      }
+
+      .registration-table th,
+      .registration-table td {
+        padding: 11px 9px;
+      }
     }
   </style>
 </head>
@@ -524,6 +666,8 @@
           <a href="#cfp">Call</a>
           <a href="#topics">Topics</a>
           <a href="#dates">Dates</a>
+          <a href="#camera-ready">Camera Ready</a>
+          <a href="#registration">Registration</a>
           <a href="#committee">Committee</a>
           <a href="#venue">Venue</a>
           <a href="https://easychair.org/conferences/?conf=ngenai2026">Submit</a>
@@ -545,7 +689,9 @@
             </p>
             <div class="actions">
               <a class="btn" href="https://easychair.org/conferences/?conf=ngenai2026">Submit Paper</a>
+              <a class="btn" href="https://events.payqlick.com/event/155/ngen-ai-workshops" target="_blank" rel="noopener noreferrer">Register Now</a>
               <a class="btn btn-outline" href="#cfp">Call for Papers</a>
+              <a class="btn btn-outline" href="#camera-ready">Camera-Ready Instructions</a>
             </div>
             <div class="hero-note">
               Accepted papers will be published in the NGEN-AI 2026 companion conference proceedings in Springer CCIS series, indexed in leading databases including SCOPUS, Norwegian Register for Scientific Journals and Series, DBLP, EI Compendex, INSPEC, SCImago, zbMATH, and the Japanese Science and Technology Agency (JST).
@@ -622,6 +768,7 @@
           </div>
 
           <table class="topic-table">
+            <tbody>
             <tr>
               <td>Architectures and design patterns for agentic AI systems</td>
               <td>Agentic workflow modelling, orchestration, and execution</td>
@@ -654,6 +801,7 @@
               <td>Datasets, benchmarks, tools, platforms, and reproducibility for agentic AI</td>
               <td>Ethical, organizational, and societal implications of agentic automation</td>
             </tr>
+            </tbody>
           </table>
         </div>
       </section>
@@ -680,9 +828,185 @@
               <strong>August 20th, 2026</strong>
             </div>
             <div class="date-item">
-              <span>Conference & Workshop</span>
+              <span>Conference &amp; Workshop</span>
               <strong>1–4 September 2026</strong>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="camera-ready">
+        <div class="container">
+          <div class="section-head">
+            <span class="label">Camera-Ready Submission</span>
+            <h2>Prepare the final publication package</h2>
+            <p>
+              Authors of accepted papers must complete the requirements below and upload one complete publication package by the workshop camera-ready deadline.
+            </p>
+          </div>
+
+          <div class="deadline-panel">
+            <div>
+              <strong>Camera-ready deadline: 20 August 2026</strong>
+              <p>Deadline time zone: Anywhere on Earth (AoE). Publisher: Springer.</p>
+            </div>
+            <a class="btn" href="https://events.payqlick.com/event/155/ngen-ai-workshops" target="_blank" rel="noopener noreferrer">Register &amp; Upload</a>
+          </div>
+
+          <div class="instruction-grid">
+            <article class="instruction-card">
+              <h3>1. Format the final paper</h3>
+              <ul>
+                <li>Use the official Springer Computer Science proceedings template.</li>
+                <li>Observe the paper type and page limit stated in the acceptance message.</li>
+                <li>Complete every required correction raised by the reviewers.</li>
+                <li>Do not alter the template margins, fonts, or spacing.</li>
+                <li>Remove page numbers and running headers.</li>
+              </ul>
+              <div class="actions">
+                <a class="btn btn-outline" href="https://link.springer.com/series/558/information-for-authors-and-editors" target="_blank" rel="noopener noreferrer">Springer Templates</a>
+                <a class="btn btn-outline" href="https://www.overleaf.com/latex/templates/springer-lecture-notes-in-computer-science/kzwwpvhwnvfj" target="_blank" rel="noopener noreferrer">Overleaf Template</a>
+              </div>
+            </article>
+
+            <article class="instruction-card">
+              <h3>2. Finalize author details</h3>
+              <ul>
+                <li>Check the title, author names and order, affiliations, email addresses, and any ORCID identifiers.</li>
+                <li>Clearly identify one corresponding author and include a valid email address.</li>
+                <li>The corresponding author must approve the final files, sign for all authors, and respond promptly to the Springer proof.</li>
+                <li>Author additions, removals, or changes of order are not possible after delivery to Springer.</li>
+              </ul>
+            </article>
+
+            <article class="instruction-card">
+              <h3>3. Add required declarations</h3>
+              <p>Add a section immediately before the references with the heading <strong>Disclosure of Interests</strong>. If no conflict exists, include:</p>
+              <p class="required-text">“The authors have no competing interests to declare that are relevant to the content of this article.”</p>
+              <p class="spacing-top">If the study involves people, animals, personal data, or biological material, also provide the relevant ethics approval, reference number, participation consent, and publication consent information.</p>
+            </article>
+
+            <article class="instruction-card">
+              <h3>4. Check figures and accessibility</h3>
+              <ul>
+                <li>Number and cite every figure and table. Put figure captions below figures and table captions above tables.</li>
+                <li>Keep tables and equations editable, and verify that all graphics remain readable in grayscale.</li>
+                <li>Use at least 800 dpi for line drawings (1200 dpi is preferred) and at least 6 pt text inside graphics.</li>
+                <li>Do not use color in body text, tables, or equations.</li>
+                <li>Describe every figure, illustration, and image-based table in a file named <strong>Alt-Text.txt</strong>.</li>
+              </ul>
+            </article>
+
+            <article class="instruction-card">
+              <h3>5. Review references and permissions</h3>
+              <ul>
+                <li>Use numbered citations in square brackets and cross-check citations against the reference list.</li>
+                <li>Write references with the Latin alphabet and include DOI details when available.</li>
+                <li>Secure written permission for reused figures, tables, images, screenshots, maps, text extracts, video, or other third-party material.</li>
+                <li>Place every required permission document in the final package.</li>
+              </ul>
+            </article>
+
+            <article class="instruction-card">
+              <h3>6. Meet publication-ethics rules</h3>
+              <ul>
+                <li>Submit original work with no plagiarism, self-plagiarism, fabricated results, or inappropriate manipulation.</li>
+                <li>Cite related and reused work and explain any overlap with earlier publications.</li>
+                <li>List only genuine authors who made a substantial scholarly contribution.</li>
+                <li>Follow Springer Nature requirements for the use of AI. An AI tool cannot be named as an author.</li>
+              </ul>
+            </article>
+
+            <article class="instruction-card full-width">
+              <h3>7. Sign the License-to-Publish form</h3>
+              <p>The corresponding author must complete the official form on behalf of all authors. The paper title and author names must exactly match the final manuscript. Sign the form by hand, scan it, and include it as a PDF; typed or digital signatures are not accepted.</p>
+              <div class="actions">
+                <a class="btn btn-outline" href="https://ngen-ai.org/assets/form/License-to-Publish%20Form.docx">Download License-to-Publish Form</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="package-box">
+            <h3>8. Upload one complete ZIP file</h3>
+            <p>The archive must contain:</p>
+            <ul>
+              <li>The final PDF and all editable source files.</li>
+              <li>The signed License-to-Publish form and <strong>Alt-Text.txt</strong>.</li>
+              <li>Copyright permissions and any approved supplementary files.</li>
+              <li>For LaTeX: every .tex, .bib, .bbl, image, font, and style file needed to compile the paper.</li>
+              <li>For Word: the editable .docx manuscript.</li>
+            </ul>
+            <p>The PDF must match the source files exactly. Remove old versions and unused files from the archive. After registration, sign in to PayQlick, open <strong>View My Tickets</strong>, and upload the ZIP package.</p>
+            <div class="actions">
+              <a class="btn" href="https://events.payqlick.com/event/155/ngen-ai-workshops" target="_blank" rel="noopener noreferrer">Open PayQlick</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="registration">
+        <div class="container">
+          <div class="section-head">
+            <span class="label">Registration</span>
+            <h2>AAWT and NGEN-AI Workshops registration</h2>
+            <p>Register through the official NGEN-AI Workshops portal. At least one author must register for every accepted paper that will be presented and included in the proceedings.</p>
+          </div>
+
+          <table class="registration-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Early Registration</th>
+                <th>Late Registration</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Author</td>
+                <td>$650</td>
+                <td>$700</td>
+              </tr>
+              <tr>
+                <td>Attendee / Non-author</td>
+                <td>$600</td>
+                <td>$700</td>
+              </tr>
+              <tr>
+                <td>Extra Page</td>
+                <td>$100</td>
+                <td>$100</td>
+              </tr>
+              <tr>
+                <td>Extra Gala Dinner Ticket</td>
+                <td>$100</td>
+                <td>$100</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="registration-note">
+            <p><strong>All fees are in USD.</strong> The workshop portal lists early registration through 13 August 2026, late registration from 14 August 2026, and a final registration deadline of 29 August 2026. The registration fee includes access to the conference program, lunches, and the gala dinner.</p>
+          </div>
+
+          <div class="policy-grid">
+            <article class="policy-card">
+              <h3>What registration covers</h3>
+              <ul>
+                <li>Participation in the workshop and shared conference program.</li>
+                <li>Conference lunches.</li>
+                <li>The gala dinner.</li>
+                <li>Presentation and publication processing for a properly registered accepted paper.</li>
+              </ul>
+            </article>
+
+            <article class="policy-card">
+              <h3>Cancellation policy</h3>
+              <p>Approved refunds are reduced by a 20% administrative fee. No refunds are available for cancellations received after 27 July 2026. Contact the organizers with questions about payment, cancellations, or participation.</p>
+            </article>
+          </div>
+
+          <div class="actions">
+            <a class="btn" href="https://events.payqlick.com/event/155/ngen-ai-workshops" target="_blank" rel="noopener noreferrer">Complete Registration</a>
           </div>
         </div>
       </section>
